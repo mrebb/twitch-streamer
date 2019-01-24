@@ -44,14 +44,13 @@ Build a web application that helps its audience see their favorite streamer's Tw
 - [x] Client:
 
     - [x] React:
-        - Reusable components to create login, callback and dashboard components.
+        - Login, callback and dashboard components.
         - Input field validations
-        - On the spot saving user state
+        - On the spot saving user state in redux
         - Handle login,logout
         - Stream live video and chat from Twitch API
     - [x] Redux: 
         - Server sends back user basic data to react app and redux store saves it in local storage as long as session is active
-        - On the spot saving user state
     - [x] Material UI: 
         - Mobile first design
     - [x] Responsive layout 
