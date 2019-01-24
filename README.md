@@ -38,6 +38,7 @@ Build a web application that helps its audience see their favorite streamer's Tw
     - [x] /api/v1/profile
     - [x] /api/v1/ping
     - [x] /api/v1/channels/:id
+  - [x] Refresh authentication token when it expires
   - [x] MongoDB from mLab
   - [x] Deployed on Heroku
 
