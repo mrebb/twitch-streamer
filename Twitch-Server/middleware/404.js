@@ -1,6 +1,4 @@
-'use strict';
-
-// Custom 404 Handler because we always want to return a JSON response
+// Custom 404 Handler because to return a JSON response
 export default (req,res,next) => {
   let error = {error:'Resource Not Found'};
   res.statusCode = 404;

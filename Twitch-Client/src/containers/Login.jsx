@@ -10,7 +10,6 @@ class Login extends React.Component {
     status: true,
   };
   
-
   /**
    * If user is logged in already just because of abrupt browser crash
    * Logout from current session and delete user record from local state.
@@ -19,10 +18,10 @@ class Login extends React.Component {
    * @memberof Login
    */
   componentDidMount(){
-    if(this.props.auth.isLoggedIn){
-      this.props.logout();
-      this.props.deleteUser();
-    }
+    
+    this.props.logout();
+    this.props.deleteUser();
+    
     superagent.get(`${api}/ping`)
       .catch(err=>{
         this.setState({status:false});

@@ -22,6 +22,7 @@ class Callback extends React.Component{
    */
   componentDidMount(){
     const values = queryString.parse(this.props.location.search);
+    if(values.error) this.setState({error:true});
     superagent
       .get(api)
       .withCredentials()

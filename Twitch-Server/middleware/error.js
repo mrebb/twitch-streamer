@@ -1,7 +1,5 @@
-'use strict';
-
 /**
- * Custom Error Handler because we always want to return a JSON response
+ * Custom Error Handler because want to return a JSON response
  * @param err
  *    err can be either a string or an object.
  *    if it's a string, this will send a JSON formatted 500 "Server Error" with the error string embedded

@@ -26,16 +26,17 @@ class Dashboard extends React.Component {
    * @memberof Dashboard
    */
   componentDidMount(){
+    this._isMounted = true;
     if(this.props.user.length>0 && this.props.user[0].access_token){
       superagent
         .get(`${process.env.REACT_APP_SERVER_URL}/api/v1/profile`)
         .query({'userID':this.props.user[0].userID})
         .set({'Authorization': `Bearer ${this.props.user[0].access_token}` })
         .then(response => {
-          if(response.status===200){
+          if(response.status===200 && this._isMounted){
             this.setState({ videoDataArray: response.body,channel:response.body[0].user_name });
             this.setState({isActive:true});
-            setTimeout(() => {
+            this.interval = setTimeout(() => {
               this.setState({isActive:false});
             }, 15000);
           }
@@ -45,9 +46,14 @@ class Dashboard extends React.Component {
         });
     }
     else{
-      this.setState({redirect:true});
+      if(this._isMounted) this.setState({redirect:true});
     }
   }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+    this._isMounted = false;
+  }
+
   onChange = event => {
     this.setState({error:false});
     const changedBit = {
