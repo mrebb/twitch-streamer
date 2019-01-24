@@ -147,5 +147,16 @@ $ npm start (Wait untill it builds and opens a browser window with `http://local
 ***
 ## Questions
 * How would you deploy the above on AWS? (ideally a rough architecture diagram will help)
-
+    * We can take two diffeent approaches. one is going with MERN stack app deployment on AWS using Nginx server and MongoDB on Ec2 instance and connect it to load balancer for auto scaling
+    * Second approach is going serverless using AWS lambda functions and DynamoDB. (This changes overall architecture and code) 
+![arc](architecture.jpg?raw=true "Architecture")
 *  Where do you see bottlenecks in your proposed architecture and how would you approach scaling this app starting from 100 reqs/sec to 900MM reqs/sec over 6 months?
+
+   * Currently it is deployed on Heroku server with mongodb hosted on mLab. As the number of users grow, we should definately plan for scaling the server to handle more traffic using auto scaling solutions given by AWS and Docker. 
+   * Create a Dockerfile
+   * Build docker image
+   * Run a docker container
+   * Create Amazon ECR (Elastic Container Registry) and uploading the node.js app image to it
+   * Creating a new task definition
+   * create a EC2 cluster
+   * Create a Amazon Elastic container service to run it so that app is always live. 
