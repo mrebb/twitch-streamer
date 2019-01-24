@@ -1,0 +1,20 @@
+.App {
+  font-family: var(--main);
+}
+/* body{
+  background-color: cadetblue;
+} */
+:root {
+  --white: white;
+  --grey: #808080;
+  --wheat:#f5deb3;
+  --black: #212121;
+  --blue: #0000ff;
+  --bluemix:#266769;
+  --yellow: #fabb05;
+  --green: #7eea88;
+  --danger: #e41b23;
+  --par:'KoHo', sans-serif;
+  --main:'Oswald', sans-serif;
+  --special: "Pattaya", sans-serif;
+}

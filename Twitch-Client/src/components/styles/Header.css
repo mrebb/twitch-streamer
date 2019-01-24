@@ -1,0 +1,36 @@
+
+.header-main {
+  background: var(--bluemix);
+  margin: 0;
+  /* padding-bottom: 3%; */
+  width: 100%;
+  text-align: center;
+  font-family: var(--special)
+}
+
+.header-text-center {
+  display: inline-flex;
+  color: var(--white);
+  opacity: 0.8;
+  /* font-family: var(--main) */
+}
+.form-header {
+  text-align: left;
+  padding-left: 5%;
+  padding-top: 1%;
+  color: black;
+  opacity: 0.7;
+  font-family: var(--par)
+}
+.nav-links a{
+  margin:2%;
+  color: var(--white);
+  opacity: 0.8;
+
+}
+
+@media only screen and (min-width:600px) {
+  .header-text-center {
+    font-size: 2.2em;
+  }
+}

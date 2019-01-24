@@ -1,0 +1,35 @@
+.text-field {
+    margin: 5%;
+  }
+  .flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  li {
+   list-style: none;
+   display: inline;
+  }
+  .submit-button{
+    margin:5%;
+  }
+  .center-div{
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  @media only screen and (min-width: 600px) {
+
+    .text-field {
+      margin: 10%;
+    }
+    .live-stream{
+      margin-left: 5%;
+    }
+    li {
+      margin-left: 2%;
+     }
+     .submit-button{
+      margin: 3% 0% 3% 8%;
+     }
+  }
+  
