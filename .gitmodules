@@ -1,0 +1,8 @@
+[submodule "twitch-stream-client"]
+	path = twitch-stream-client
+	url = https://git.heroku.com/twitch-stream-client.git
+	branch = master
+[submodule "twitch-stream-server"]
+	path = twitch-stream-server
+	url = https://git.heroku.com/twitch-stream-server.git
+	branch = master
